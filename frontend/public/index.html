@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luna Pizza — Wood-fired pizzeria in Portland</title>
+  <meta name="description" content="Luna Pizza is a small neighborhood pizzeria. Fresh dough, simple ingredients, and wood-fired flavor.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-testid="site-header">
+    <div class="container nav">
+      <a href="#home" class="logo" data-testid="logo-link" aria-label="Luna Pizza — back to top">
+        <svg class="logo-mark" width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+        </svg>
+        <span>Luna Pizza</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#home" data-testid="nav-link-home">Home</a></li>
+          <li><a class="nav-link" href="#menu" data-testid="nav-link-menu">Menu</a></li>
+          <li><a class="nav-link" href="#about" data-testid="nav-link-about">About</a></li>
+          <li><a class="nav-link" href="#contact" data-testid="nav-link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#favorites" class="btn btn-primary btn-sm nav-order" data-testid="nav-order-button">
+          Order Now
+          <span class="order-badge" data-testid="order-counter" hidden>0</span>
+        </a>
+        <button class="nav-toggle" type="button" data-testid="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow anim-up delay-1">Wood-fired pizzeria · Portland, OR</p>
+          <h1 class="hero-title">
+            <span class="line"><span class="line-inner">Pizza made</span></span>
+            <span class="line"><span class="line-inner">the Italian way.</span></span>
+          </h1>
+          <p class="hero-sub anim-up delay-3">Fresh dough, simple ingredients, and wood-fired flavor.</p>
+          <div class="hero-actions anim-up delay-4">
+            <a href="#menu" class="btn btn-primary" data-testid="hero-view-menu-button">View Menu</a>
+            <a href="#favorites" class="btn btn-outline" data-testid="hero-order-button">Order Now</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="images/hero.jpg" alt="Wood-fired margherita pizza fresh out of the oven" data-testid="hero-image">
+          <span class="hero-frame" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Marquee ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span class="marquee-item">Wood-fired oven</span>
+          <span class="marquee-item">48-hour dough</span>
+          <span class="marquee-item">San Marzano tomatoes</span>
+          <span class="marquee-item">Fresh basil daily</span>
+          <span class="marquee-item">Fior di latte</span>
+          <span class="marquee-item">Made by hand</span>
+        </div>
+        <div class="marquee-group">
+          <span class="marquee-item">Wood-fired oven</span>
+          <span class="marquee-item">48-hour dough</span>
+          <span class="marquee-item">San Marzano tomatoes</span>
+          <span class="marquee-item">Fresh basil daily</span>
+          <span class="marquee-item">Fior di latte</span>
+          <span class="marquee-item">Made by hand</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Featured pizzas ============ -->
+    <section class="section" id="favorites">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">From the oven</p>
+          <h2>Our favorites</h2>
+          <p class="section-sub">Four pizzas we make again and again.</p>
+        </div>
+
+        <div class="pizza-grid">
+          <article class="pizza-card reveal" data-testid="pizza-card-margherita">
+            <img src="images/margherita.jpg" alt="Margherita pizza with fresh basil leaves" data-testid="pizza-image-margherita" loading="lazy">
+            <div class="pizza-card-body">
+              <div class="pizza-card-top">
+                <h3>Margherita</h3>
+                <span class="price" data-testid="price-margherita">$12</span>
+              </div>
+              <p>San Marzano tomato, fior di latte and fresh basil.</p>
+              <button class="btn btn-outline btn-sm btn-add" type="button" data-testid="add-to-order-margherita" data-pizza="Margherita">Add to order</button>
+            </div>
+          </article>
+
+          <article class="pizza-card reveal" data-testid="pizza-card-diavola">
+            <img src="images/diavola.jpg" alt="Diavola pizza with spicy salami" data-testid="pizza-image-diavola" loading="lazy">
+            <div class="pizza-card-body">
+              <div class="pizza-card-top">
+                <h3>Diavola</h3>
+                <span class="price" data-testid="price-diavola">$15</span>
+              </div>
+              <p>Spicy salami, mozzarella and a hint of chili.</p>
+              <button class="btn btn-outline btn-sm btn-add" type="button" data-testid="add-to-order-diavola" data-pizza="Diavola">Add to order</button>
+            </div>
+          </article>
+
+          <article class="pizza-card reveal" data-testid="pizza-card-prosciutto">
+            <img src="images/prosciutto-funghi.jpg" alt="Prosciutto e Funghi pizza with mushrooms" data-testid="pizza-image-prosciutto" loading="lazy">
+            <div class="pizza-card-body">
+              <div class="pizza-card-top">
+                <h3>Prosciutto e Funghi</h3>
+                <span class="price" data-testid="price-prosciutto">$16</span>
+              </div>
+              <p>Prosciutto, roasted mushrooms and mozzarella.</p>
+              <button class="btn btn-outline btn-sm btn-add" type="button" data-testid="add-to-order-prosciutto" data-pizza="Prosciutto e Funghi">Add to order</button>
+            </div>
+          </article>
+
+          <article class="pizza-card reveal" data-testid="pizza-card-formaggi">
+            <img src="images/quattro-formaggi.jpg" alt="Quattro Formaggi pizza with melted cheeses" data-testid="pizza-image-formaggi" loading="lazy">
+            <div class="pizza-card-body">
+              <div class="pizza-card-top">
+                <h3>Quattro Formaggi</h3>
+                <span class="price" data-testid="price-formaggi">$15</span>
+              </div>
+              <p>Four cheeses, no tomato, finished with honey.</p>
+              <button class="btn btn-outline btn-sm btn-add" type="button" data-testid="add-to-order-formaggi" data-pizza="Quattro Formaggi">Add to order</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Menu ============ -->
+    <section class="section section-alt" id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The full spread</p>
+          <h2>The menu</h2>
+          <p class="section-sub">Simple, seasonal and always made to order.</p>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filter the menu">
+          <button class="filter-btn is-active" type="button" data-filter="all" data-testid="menu-filter-all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="pizza" data-testid="menu-filter-pizza" aria-pressed="false">Pizza</button>
+          <button class="filter-btn" type="button" data-filter="starters" data-testid="menu-filter-starters" aria-pressed="false">Starters</button>
+          <button class="filter-btn" type="button" data-filter="desserts" data-testid="menu-filter-desserts" aria-pressed="false">Desserts</button>
+          <button class="filter-btn" type="button" data-filter="drinks" data-testid="menu-filter-drinks" aria-pressed="false">Drinks</button>
+        </div>
+
+        <div class="menu-list" id="menu-list">
+          <div class="menu-item" data-category="pizza" data-testid="menu-item-margherita">
+            <div class="menu-item-top"><h3>Margherita</h3><span class="menu-dots"></span><span class="price">$12</span></div>
+            <p>San Marzano tomato, fior di latte, fresh basil, olive oil.</p>
+          </div>
+          <div class="menu-item" data-category="pizza" data-testid="menu-item-diavola">
+            <div class="menu-item-top"><h3>Diavola</h3><span class="menu-dots"></span><span class="price">$15</span></div>
+            <p>Spicy salami, mozzarella, tomato, a whisper of chili.</p>
+          </div>
+          <div class="menu-item" data-category="pizza" data-testid="menu-item-prosciutto">
+            <div class="menu-item-top"><h3>Prosciutto e Funghi</h3><span class="menu-dots"></span><span class="price">$16</span></div>
+            <p>Prosciutto cotto, roasted mushrooms, mozzarella, tomato.</p>
+          </div>
+          <div class="menu-item" data-category="pizza" data-testid="menu-item-formaggi">
+            <div class="menu-item-top"><h3>Quattro Formaggi</h3><span class="menu-dots"></span><span class="price">$15</span></div>
+            <p>Mozzarella, gorgonzola, fontina and parmesan.</p>
+          </div>
+          <div class="menu-item" data-category="pizza" data-testid="menu-item-capricciosa">
+            <div class="menu-item-top"><h3>Capricciosa</h3><span class="menu-dots"></span><span class="price">$16</span></div>
+            <p>Ham, artichokes, black olives and mushrooms.</p>
+          </div>
+          <div class="menu-item" data-category="pizza" data-testid="menu-item-verdure">
+            <div class="menu-item-top"><h3>Verdure</h3><span class="menu-dots"></span><span class="price">$13</span></div>
+            <p>Grilled zucchini, peppers, basil and smoked scamorza.</p>
+          </div>
+
+          <div class="menu-item" data-category="starters" data-testid="menu-item-focaccia">
+            <div class="menu-item-top"><h3>Garlic Focaccia</h3><span class="menu-dots"></span><span class="price">$6</span></div>
+            <p>Baked in the wood oven with rosemary and flaky salt.</p>
+          </div>
+          <div class="menu-item" data-category="starters" data-testid="menu-item-bruschetta">
+            <div class="menu-item-top"><h3>Bruschetta</h3><span class="menu-dots"></span><span class="price">$8</span></div>
+            <p>Grilled sourdough, crushed tomatoes, garlic and basil.</p>
+          </div>
+          <div class="menu-item" data-category="starters" data-testid="menu-item-arancini">
+            <div class="menu-item-top"><h3>Arancini</h3><span class="menu-dots"></span><span class="price">$9</span></div>
+            <p>Crispy risotto balls with a mozzarella center and marinara.</p>
+          </div>
+          <div class="menu-item" data-category="starters" data-testid="menu-item-burrata">
+            <div class="menu-item-top"><h3>Burrata</h3><span class="menu-dots"></span><span class="price">$11</span></div>
+            <p>Creamy burrata, prosciutto and grilled bread.</p>
+          </div>
+
+          <div class="menu-item" data-category="desserts" data-testid="menu-item-tiramisu">
+            <div class="menu-item-top"><h3>Tiramisù</h3><span class="menu-dots"></span><span class="price">$8</span></div>
+            <p>Espresso-soaked savoiardi, mascarpone, cocoa.</p>
+          </div>
+          <div class="menu-item" data-category="desserts" data-testid="menu-item-panna-cotta">
+            <div class="menu-item-top"><h3>Panna Cotta</h3><span class="menu-dots"></span><span class="price">$7</span></div>
+            <p>Vanilla bean panna cotta with amaretto strawberries.</p>
+          </div>
+          <div class="menu-item" data-category="desserts" data-testid="menu-item-affogato">
+            <div class="menu-item-top"><h3>Affogato</h3><span class="menu-dots"></span><span class="price">$6</span></div>
+            <p>Vanilla gelato drowned in hot espresso.</p>
+          </div>
+
+          <div class="menu-item" data-category="drinks" data-testid="menu-item-espresso">
+            <div class="menu-item-top"><h3>Espresso</h3><span class="menu-dots"></span><span class="price">$3</span></div>
+            <p>Dark roast, pulled short. Or add a little foam.</p>
+          </div>
+          <div class="menu-item" data-category="drinks" data-testid="menu-item-soda">
+            <div class="menu-item-top"><h3>Italian Soda</h3><span class="menu-dots"></span><span class="price">$4</span></div>
+            <p>Blood orange or limonata, served cold.</p>
+          </div>
+          <div class="menu-item" data-category="drinks" data-testid="menu-item-peroni">
+            <div class="menu-item-top"><h3>Peroni</h3><span class="menu-dots"></span><span class="price">$6</span></div>
+            <p>Chilled Italian lager, 330ml.</p>
+          </div>
+          <div class="menu-item" data-category="drinks" data-testid="menu-item-wine">
+            <div class="menu-item-top"><h3>House Wine</h3><span class="menu-dots"></span><span class="price">$9</span></div>
+            <p>Red or white, poured by the glass.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <img src="images/interior.jpg" alt="The warm dining room at Luna Pizza" data-testid="about-image" loading="lazy">
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">Our story</p>
+          <h2>Honest pizza, made slowly.</h2>
+          <p class="about-lead">Luna Pizza started with a simple idea: make honest pizza using good ingredients and traditional techniques.</p>
+          <div class="about-text">
+            <p>The dough rests for two days before it ever meets the oven. The tomatoes are crushed by hand, the mozzarella is pulled fresh, and every pizza is baked over wood — the way they do it in Naples.</p>
+            <p>Whether it's a quick slice at the counter or a slow dinner with friends, you're always welcome at Luna.</p>
+          </div>
+          <p class="about-signature">Sofia &amp; Marco — founders</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Quality ============ -->
+    <section class="section section-alt" id="quality">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why it tastes good</p>
+          <h2>Simple things, done well.</h2>
+        </div>
+        <div class="quality-grid">
+          <div class="quality-item reveal" data-testid="quality-dough">
+            <svg class="quality-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22V9"/>
+              <path d="M12 9C12 5.5 9.5 3 6 3c0 3.5 2.5 6 6 6z"/>
+              <path d="M12 9c0-3.5 2.5-6 6-6 0 3.5-2.5 6-6 6z"/>
+              <path d="M12 15.5c0-2.8-2-4.5-5-4.5 0 2.8 2 4.5 5 4.5z"/>
+              <path d="M12 15.5c0-2.8 2-4.5 5-4.5 0 2.8-2 4.5-5 4.5z"/>
+            </svg>
+            <h3>Fresh dough</h3>
+            <p>Mixed every morning and rested for 48 hours. Never frozen, never rushed.</p>
+          </div>
+          <div class="quality-item reveal" data-testid="quality-ingredients">
+            <svg class="quality-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="13.5" r="6.5"/>
+              <path d="M12 7c-.7-1.6-2.4-2.2-4-1.7.9.9 1.4 1.7 1.7 2.6"/>
+              <path d="M12 7c.7-1.6 2.4-2.2 4-1.7-.9.9-1.4 1.7-1.7 2.6"/>
+              <path d="M12 7V4.5"/>
+            </svg>
+            <h3>Italian ingredients</h3>
+            <p>San Marzano tomatoes, fior di latte and olive oil from small growers.</p>
+          </div>
+          <div class="quality-item reveal" data-testid="quality-oven">
+            <svg class="quality-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3c2.2 3.4 5.5 5.3 5.5 9.2A5.5 5.5 0 0 1 12 17.7a5.5 5.5 0 0 1-5.5-5.5C6.5 8.3 9.8 6.4 12 3z"/>
+              <path d="M9.8 14.2A2.3 2.3 0 0 0 12 16.2a2.3 2.3 0 0 0 2.2-2"/>
+            </svg>
+            <h3>Wood-fired oven</h3>
+            <p>Baked at 850°F in ninety seconds for a light, blistered, smoky crust.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Gallery ============ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2>From the kitchen.</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal" data-testid="gallery-oven">
+            <img src="images/gallery-oven.jpg" alt="Flames inside the wood-fired oven" loading="lazy">
+          </figure>
+          <figure class="gallery-item reveal" data-testid="gallery-pizza">
+            <img src="images/gallery-pizza.jpg" alt="A pizza baking on the stone oven floor" loading="lazy">
+          </figure>
+          <figure class="gallery-item reveal" data-testid="gallery-dough">
+            <img src="images/gallery-dough.jpg" alt="A baker holding a ball of fresh dough" loading="lazy">
+          </figure>
+          <figure class="gallery-item reveal" data-testid="gallery-interior">
+            <img src="images/gallery-interior.jpg" alt="Tables in the Luna Pizza dining room" loading="lazy">
+          </figure>
+          <figure class="gallery-item reveal" data-testid="gallery-ingredients">
+            <img src="images/gallery-ingredients.jpg" alt="Fresh tomatoes and basil ready for the kitchen" loading="lazy">
+          </figure>
+          <figure class="gallery-item reveal" data-testid="gallery-table">
+            <img src="images/gallery-table.jpg" alt="A margherita pizza served on a wooden board" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Find us</p>
+          <h2>Visit us.</h2>
+          <p class="contact-lede">Corner of Alder and 9th — look for the red awning.</p>
+
+          <ul class="info-list">
+            <li class="info-row" data-testid="contact-address">
+              <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s-7-5.1-7-11a7 7 0 1 1 14 0c0 5.9-7 11-7 11z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
+              <div>
+                <strong>142 Alder Street</strong>
+                <span class="sub">Portland, OR 97205</span>
+              </div>
+            </li>
+            <li class="info-row" data-testid="contact-hours">
+              <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+              <div class="hours">
+                <div class="hours-row"><span>Mon – Thu</span><span class="menu-dots"></span><span>12pm – 10pm</span></div>
+                <div class="hours-row"><span>Fri – Sat</span><span class="menu-dots"></span><span>12pm – 11pm</span></div>
+                <div class="hours-row"><span>Sunday</span><span class="menu-dots"></span><span>12pm – 9pm</span></div>
+              </div>
+            </li>
+            <li class="info-row" data-testid="contact-phone">
+              <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-17.7-17.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6.1 6.1l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/>
+              </svg>
+              <div>
+                <strong>(503) 555-0182</strong>
+                <span class="sub">Call ahead for takeout</span>
+              </div>
+            </li>
+            <li class="info-row" data-testid="contact-email">
+              <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M22 6 12 13 2 6"/>
+              </svg>
+              <div>
+                <strong>hello@lunapizza.com</strong>
+                <span class="sub">We answer within a day</span>
+              </div>
+            </li>
+          </ul>
+
+          <a class="btn btn-outline" href="https://maps.google.com/?q=142+Alder+Street+Portland+OR" target="_blank" rel="noopener" data-testid="get-directions-button">Get Directions</a>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <form class="form-card" id="contact-form" novalidate data-testid="contact-form">
+            <h3>Send us a note</h3>
+            <div class="form-success" id="form-success" role="status" data-testid="form-success">Thanks — your message is on its way. We'll get back to you soon.</div>
+
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" data-testid="contact-name-input">
+              <p class="error-msg" data-testid="name-error">Please tell us your name (at least 2 characters).</p>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" data-testid="contact-email-input">
+              <p class="error-msg" data-testid="email-error">Please enter a valid email address.</p>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="A table for Friday? Catering? Say hi." data-testid="contact-message-input"></textarea>
+              <p class="error-msg" data-testid="message-error">Please write a short message (at least 10 characters).</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" data-testid="contact-submit-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo logo-light" data-testid="footer-logo">
+          <svg class="logo-mark" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
+          </svg>
+          <span>Luna Pizza</span>
+        </a>
+        <p>A small neighborhood pizzeria making wood-fired pizza the Italian way — fresh dough, good ingredients, and a warm welcome.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram" data-testid="social-instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.2" cy="6.8" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" data-testid="social-facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+              <path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H6.5v3H9v9h3v-9h2.5l.5-3H12V6.5a1 1 0 0 1 1-1h2V3z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="X" data-testid="social-x">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+              <path d="M5 4h3.2l4 5.6L16.6 4H20l-6.1 7.9L20.5 20h-3.2l-4.3-6-5 6H4.7l6.6-7.9L5 4z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#home" data-testid="footer-link-home">Home</a></li>
+          <li><a href="#menu" data-testid="footer-link-menu">Menu</a></li>
+          <li><a href="#about" data-testid="footer-link-about">About</a></li>
+          <li><a href="#contact" data-testid="footer-link-contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Opening hours</h4>
+        <ul class="footer-hours">
+          <li><span>Mon – Thu</span><span>12pm – 10pm</span></li>
+          <li><span>Fri – Sat</span><span>12pm – 11pm</span></li>
+          <li><span>Sunday</span><span>12pm – 9pm</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Find us</h4>
+        <ul class="footer-contact">
+          <li>142 Alder Street<br>Portland, OR 97205</li>
+          <li>(503) 555-0182</li>
+          <li>hello@lunapizza.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© <span id="year" data-testid="footer-year">2025</span> Luna Pizza. All rights reserved.</p>
+        <p>Wood-fired on Alder Street.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
