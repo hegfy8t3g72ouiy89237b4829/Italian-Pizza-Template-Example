@@ -54,7 +54,13 @@ Italian-Pizza-Template-Example/
 └── README.md
 ```
 
-## 🚀 Purpose
+<img width="1810" height="701" alt="image" src="https://github.com/user-attachments/assets/222eac29-52d2-4c5f-89e9-23e6ee89d1dd" />
+<img width="1789" height="703" alt="image" src="https://github.com/user-attachments/assets/f60865c3-bb9c-4076-8816-17f194d04111" />
+<img width="1787" height="747" alt="image" src="https://github.com/user-attachments/assets/6e36e060-07e8-40b7-876d-1101bff0ab04" />
+<img width="1861" height="784" alt="image" src="https://github.com/user-attachments/assets/2142f782-4c36-4706-9b5f-2e65f949ff6b" />
+<img width="1859" height="800" alt="image" src="https://github.com/user-attachments/assets/c9bdd8fd-f54a-49d1-a06b-81ac5426dc6b" />
+
+
 
 This project was created as a portfolio example for a fictional Italian restaurant and demonstrates frontend web development, responsive design, UI implementation, and basic JavaScript interactivity.
 **Status:** Portfolio project
